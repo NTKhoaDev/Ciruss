@@ -1,0 +1,86 @@
+.artist {
+    .container-fluid {
+        position: relative;
+    }
+    .container-center {
+        position: relative;
+        z-index: 3;
+    }
+    .row {
+        margin: 0px -25px;
+        align-items: center;
+    }
+    .col-6 {
+        padding: 0px 25px;
+    }
+    .title-block {
+        padding-bottom: 30px;
+        transform: rotate(-1deg);
+    }
+    .description {
+        padding-bottom: 50px;
+    }
+    .image-absolute {
+        position: absolute;
+        width: 20%;
+        img {
+            width: 100%;
+        }
+    }
+    .image-absolute-left {
+        top: 50%;
+        left: 0px;
+        transform: translateY(-50%);
+    }
+    .image-absolute-bottom {
+        bottom: 0px;
+        right: 0px;
+    }
+}
+
+@media screen and (max-width: @pc-view) {
+    .artist {
+        .row {
+            margin: 0px -15px;
+        }
+        .col-6 {
+            padding: 0px 15px;
+        }
+    }
+}
+
+@media screen and (max-width: @tablet-view) {
+    .artist {
+        .description {
+            padding-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-view) {
+    .artist {
+        .description {
+            padding-bottom: 20px;
+        }
+        .row {
+            margin: 0px;
+        }
+        .col-6 {
+            padding: 0px;
+            width: 100%;
+        }
+        .col-image {
+            display: none;
+        }
+        .image-absolute {
+            width: 40%;
+        }
+        .image-absolute-left {
+            top: 10%;
+            transform: translateY(0%);
+        }
+        .title-block {
+            padding-bottom: 20px;
+        }
+    }
+}

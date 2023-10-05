@@ -1,0 +1,20 @@
+.video-wrap {
+    position: relative;
+}
+.btn-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    img {
+        width: 70px;
+    }
+} 
+
+@media screen and (max-width: @pc-view) {
+    .btn-play {
+        img {
+            width: 60px;
+        }
+    }
+}

@@ -1,0 +1,154 @@
+.perform-show {
+    .row {
+        margin: 0px -25px;
+    }
+    .col-5, .col-6, .col-7 {
+        padding: 0px 25px;
+    }
+    .image-top {
+        padding-top: 120%;
+        transform: rotate(1deg);
+    }
+    .title-block {
+        text-transform: uppercase;
+        padding-bottom: 100px;
+    }
+    .description-light {
+        text-transform: uppercase;
+        padding-bottom: 100px;
+    }
+    .description-bold {
+        text-transform: uppercase;
+        font-family: @bold;
+        color: @color-primary;
+        padding-left: 100px;
+    }
+    .row-bottom {
+        align-items: center;
+        padding-top: 50px;
+    }
+    .image-bottom {
+        padding-top: 100%;
+        transform: rotate(-1deg);
+    }
+    .description {
+        h1, h2, h3, h4, h5, h6 {
+            font-size: 22px;
+            padding-bottom: 20px;
+        }
+        ol, ul, p {
+            padding-bottom: 10px;
+        }
+        p > img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .wp-caption {
+            padding: 20px 0px;
+            text-align: center;
+            max-width: 100%;
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+        .wp-caption-text {
+            font-size: 16px;
+            text-align: center;
+            padding-bottom: 0px;
+            font-style: italic;
+        }
+    }
+}
+
+@media screen and (max-width: @pc-view) {
+    .perform-show {
+        .description {
+            .wp-caption-text {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @pc-view) {
+    .perform-show {
+        .row {
+            margin: 0px -15px;
+        }
+        .col-5, .col-6, .col-7 {
+            padding: 0px 15px;
+        }
+        .title-block {
+            padding-bottom: 50px;
+        }
+        .description-light {
+            padding-bottom: 50px;
+        }
+        .description {
+            h1, h2, h3, h4, h5, h6 {
+                font-size: 20px;
+            }
+            p > img {
+                margin: 10px auto;
+            }
+            .wp-caption {
+                padding: 10px 0px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @tablet-view) {
+    .perform-show {
+        .title-block {
+            padding-bottom: 30px;
+        }
+        .description-light {
+            padding-bottom: 30px;
+        }
+        .description-bold {
+            padding-left: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-view) {
+    .perform-show {
+        .row {
+            margin: 0px;
+        }
+        .col-5, .col-6, .col-7 {
+            padding: 0px;
+            width: 100%;
+        }
+        .col-5 {
+            margin-bottom: 20px;
+        }
+        .col-7 {
+            margin-bottom: 20px;
+        }
+        .title-block {
+            padding-bottom: 20px;
+        }
+        .description-light {
+            padding-bottom: 10px;
+        }
+        .description-bold {
+            padding-left: 30px;
+        }
+        .row-bottom {
+            padding-top: 10px;
+        }
+        .col-image {
+            margin-bottom: 20px;
+            order: 2;
+        }
+        .col-description {
+            order: 1;
+        }
+    }
+}

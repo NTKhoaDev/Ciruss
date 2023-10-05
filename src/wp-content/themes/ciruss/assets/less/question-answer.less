@@ -1,0 +1,224 @@
+.question-answer {
+    .row {
+        align-items: flex-start;
+        margin: 0px;
+    }
+    .col-7 {
+        height: calc(~"100vh - 100px");
+        overflow-y: auto;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            width: 0px;
+        }
+        padding: 100px;
+        width: 65%;
+    }
+    .col-5 {
+        height: calc(~"100vh - 100px");
+        width: 35%;
+        padding: 100px 50px;
+        position: relative;
+        z-index: 2;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-left: 30px solid @color-white;
+            border-top: 30px solid transparent;
+            border-bottom: 30px solid transparent;
+        }
+    }
+    .image-absolute {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        transform: translateX(100px);
+        max-width: 300px;
+    }
+    .col-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .vector {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        max-width: 200px;
+        z-index: -1;
+    }
+    .col-content {
+        background: @color-primary;
+        color: @color-white;
+    }
+    .content {
+        h1, h2, h3, h4, h5, h6 {
+            font-family: @bold;
+            padding-bottom: 20px;
+        }
+        h1, h2, h3 {
+            font-size: 24px;
+
+        }
+        h4, h5, h6 {
+            font-size: 22px;
+        }
+        ol, ul, p {
+            padding-bottom: 10px;
+        }
+        p > img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .wp-caption {
+            padding: 20px 0px;
+            text-align: center;
+            margin: 0px auto;
+            max-width: 100%;
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+        .wp-caption-text {
+            font-size: 16px;
+            text-align: center;
+            padding-bottom: 0px;
+            font-style: italic;
+        }
+    }
+}
+
+@media screen and (max-width: @hd-view) {
+    .question-answer {
+        .col-7, .col-5 {
+            height: calc(~"100vh - 90px");
+        }
+    }
+}
+
+@media screen and (max-width: @pc-view) {
+    .question-answer {
+        .col-5, .col-7 {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        .col-5 {
+            padding-left: 30px;
+            padding-right: 30px;
+            height: calc(~"100vh - 70px");
+            &::after {
+                border-width: 20px;
+            }
+        }
+        .col-7 {
+            padding-left: 50px;
+            padding-right: 50px;
+            height: calc(~"100vh - 70px");
+        }
+        .image-absolute {
+            max-width: 200px;
+            transform: translateX(50px);
+        }
+        .vector {
+            max-width: 150px;
+        }
+        .content {
+            h1, h2, h3 {
+                font-size: 22px;
+    
+            }
+            h4, h5, h6 {
+                font-size: 20px;
+            }
+            p > img {
+                margin: 10px auto;
+            }
+            .wp-caption {
+                padding: 10px 0px;
+            }
+            .wp-caption-text {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @tablet-view) {
+    .question-answer {
+        .col-7, .col-5 {
+            height: calc(~"100vh - 60px");
+            padding-top: 35px;
+            padding-bottom: 35px;
+        }
+        .col-5 {
+            padding-left: 10px;
+            padding-right: 10px;
+            &::after {
+                border-width: 15px;
+            }
+        }
+        .col-7 {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .content {
+            h1, h2, h3 {
+                font-size: 20px;
+                padding-bottom: 10px;
+    
+            }
+            h4, h5, h6 {
+                font-size: 18px;
+                padding-bottom: 10px;
+            }
+            .wp-caption-text {
+                font-size: 12px;
+            }
+        }
+        .image-absolute {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-view) {
+    .question-answer {
+        .col-5, .col-7 {
+            width: 100%;
+            padding: 0px;
+            height: auto;
+        }
+        .col-5 {
+            padding: 30px 10px 20px;
+            &::after {
+                left: 50%;
+                top: 100%;
+                transform: translate(-50%, 0%);
+                border-top: 15px solid #fff;
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+            }
+        }
+        .col-7 {
+            padding: 30px 10px;
+        }
+        .content {
+            h1, h2, h3 {
+                font-size: 18px;
+    
+            }
+            h4, h5, h6 {
+                font-size: 16px;
+            }
+        }
+    }
+}

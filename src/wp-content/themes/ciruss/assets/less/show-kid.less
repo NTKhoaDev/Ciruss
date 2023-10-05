@@ -1,0 +1,93 @@
+.show-kid {
+    .row {
+        margin: 0px -25px;
+    }
+    .col-6 {
+        padding: 0px 25px;
+    }
+    .title-block {
+        padding-bottom: 10px;
+    }
+    .time {
+        font-size: 16px;
+    }
+    .btn-submit {
+        margin-top: 100px;
+    }
+    .col-title {
+        padding-top: 100px;
+    }
+    .description {
+        padding-bottom: 50px;
+    }
+    .image-title {
+        padding-top: 100%;
+        transform: rotate(-1deg);
+        margin-bottom: 50px;
+        overflow: hidden;
+    }
+    .image-description {
+        padding-top: 120%;
+        transform: rotate(1deg);
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: @pc-view) {
+    .show-kid {
+        .row {
+            margin: 0px -15px;
+        }
+        .col-6 {
+            padding: 0px 15px;
+        }
+        .btn-submit {
+            margin-top: 50px;
+        }
+        .time {
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: @tablet-view) {
+    .show-kid {
+        .description {
+            padding-bottom: 30px;
+        }
+        .btn-submit {
+            margin-top: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-view) {
+    .show-kid {
+        .description {
+            padding-bottom: 20px;
+        }
+        .btn-submit {
+            margin-top: 20px;
+        }
+        .time {
+            font-size: 12px;
+        }
+        .row {
+            margin: 0px;
+        }
+        .col-6 {
+            padding: 0px;
+            width: 100%;
+        }
+        .image-title {
+            padding-top: 80%;
+            margin-bottom: 20px;
+        }
+        .col-title {
+            margin-bottom: 20px;
+        }
+        .image-description {
+            padding-top: 80%;
+        }
+    }
+}

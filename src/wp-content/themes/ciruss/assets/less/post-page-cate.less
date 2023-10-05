@@ -1,0 +1,62 @@
+.post-cate {
+    .box-taxonomy {
+        padding-bottom: 50px;
+    }
+    .list-taxonomy {
+        justify-content: center;
+    }
+    .row {
+        margin: 0px -15px;
+    }
+    .col-3 {
+        padding: 0px 15px;
+        margin-bottom: 30px;
+    }
+    .pagination-wrap {
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: @pc-view) {
+    .post-cate {
+        .row {
+            margin: 0px -10px;
+        }
+        .col-3 {
+            padding: 0px 10px;
+            width: calc(~"100%/3");
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: @tablet-view) {
+    .post-cate {
+        .row {
+            margin: 0px -5px;
+        }
+        .col-3 {
+            padding: 0px 5px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-view) {
+    .post-cate {
+        .section {
+            padding-top: 35px;
+            padding-bottom: 35px;
+        }
+        .box-taxonomy {
+            padding-bottom: 30px;
+        }
+        .row {
+            margin: 0px;
+        }
+        .col-3 {
+            padding: 0px;
+            width: 100%;
+        }
+    }
+}

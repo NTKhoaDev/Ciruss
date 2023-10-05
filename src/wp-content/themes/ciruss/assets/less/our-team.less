@@ -1,0 +1,133 @@
+.our-team.both, .our-team.bottom {
+    .section {
+        padding-bottom: 120px;
+    }
+}
+.our-team {
+    .content-top {
+        max-width: 900px;
+        margin: 0px auto;
+        padding-bottom: 50px;
+        text-align: center;
+    }
+    .title-block {
+        padding-bottom: 50px;
+        text-align: center;
+        margin: 0px auto;
+    }
+    .row {
+        margin: 0px -15px;
+        justify-content: center;
+        & .col-2:nth-child(even) {
+            transform: rotate(1deg);
+        }
+        & .col-2:nth-child(odd) {
+            transform: rotate(-1deg);
+        }
+    }
+    .col-2 {
+        padding: 0px 15px;
+        margin-bottom: 30px;
+    }
+    .image {
+        padding-top: 100%;
+    }
+    .contents {
+        padding: 10px 0px;
+    }
+    .name {
+        font-family: @medium;
+        font-size: 18px;
+    }
+    .specialize {
+        font-size: 14px;
+        padding-bottom: 5px;
+    }
+    .socials {
+        list-style-type: none;
+        display: flex;
+        & .social-item:not(:last-child) {
+            margin-right: 5px;
+        }
+    }
+    .social-item {
+        a {
+            width: 100%;
+            height: 100%;
+        }
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: @pc-view) {
+    .our-team.both, .our-team.bottom {
+        .section {
+            padding-bottom: 80px;
+        }
+    }
+    .our-team {
+        .title-block {
+            padding-bottom: 30px;
+        }
+        .row {
+            margin: 0px -10px;
+        }
+        .col-2 {
+            padding: 0px 10px;
+            width: 20%;
+            margin-bottom: 20px;
+        }
+        .name {
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: @tablet-view) {
+    .our-team.both, .our-team.bottom {
+        .section {
+            padding-bottom: 50px;
+        }
+    }
+    .our-team {
+        .row {
+            margin: 0px -5px;
+        }
+        .col-2 {
+            padding: 0px 5px;
+            width: 25%;
+            margin-bottom: 10px;
+        }
+        .name {
+            font-size: 14px;
+        }
+        .content-top {
+            padding-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-view) {
+    .our-team.both, .our-team.bottom {
+        .section {
+            padding-bottom: 20px;
+        }
+    }
+    .our-team {
+        .col-2 {
+            width: 50%;
+        }
+        .name {
+            font-size: 12px;
+        }
+        .title-block {
+            padding-bottom: 20px;
+        }
+        .content-top {
+            padding-bottom: 20px;
+        }
+    }
+}

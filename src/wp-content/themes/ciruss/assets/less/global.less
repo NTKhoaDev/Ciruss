@@ -1,0 +1,240 @@
+.container-fluid {
+    max-width: 100%;
+    margin: 0px auto;
+    padding: 0px;
+}
+.container-center {
+    padding: 0px 150px;
+}
+.section {
+    padding: 100px 0px;
+}
+.block-hide {
+    height: 99px;
+    transition: all linear .2s;
+}
+.block-hide-small {
+    height: 79px;
+}
+.image {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+.form-search {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+    .form-control {
+        position: relative;
+        padding: 0px;
+        padding-left: 24px;
+        padding-right: 14px;
+        border-radius: 38px;
+        overflow: hidden;
+        border: 1px solid @color-black;
+    }
+    .icon-search {
+        width: 20px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10px;
+    }
+    .icon-submit {
+        display: none;
+    }
+    .input-search {
+        border: 0px;
+        outline: none;
+        font-size: 16px;
+        font-family: @regular;
+        font-weight: normal;
+        height: 38px;
+        max-width: 200px;
+        padding: 0px;
+        width: 0px;
+        transition: all linear .3s;
+        &::placeholder {
+            color: @color-black;
+        }
+    }
+}
+.form-search-show {
+    .icon-show {
+        display: none;
+    }
+    .icon-submit {
+        display: inline;
+    }
+    .input-search {
+        padding-left: 10px;
+        width: 200px;
+    }
+}
+.top {
+    clip-path: polygon(0 50px, 100% 0, 100% 100%, 0% 100%);
+    margin-top: -50px;
+    .section {
+        padding-top: 150px;
+    }
+}
+.bottom {
+    clip-path: polygon(0 0, 100% 0, 100% ~'calc(100% - 50px)', 0% 100%);
+    .section {
+        padding-bottom: 150px;
+    }
+}
+.both {
+    .section {
+        padding: 150px 0px;
+    }
+    margin-top: -50px;
+    clip-path: polygon(0 50px, 100% 0, 100% ~'calc(100% - 50px)', 0% 100%);
+}
+.show-admin{
+    display: none;
+}
+
+@media screen and (max-width: @hd-view) {
+    .container-center {
+        padding: 0px 100px;
+    }
+    .block-hide {
+        height: 89px;
+    }
+    .block-hide-small {
+        height: 79px;
+    }
+}
+
+@media screen and (max-width: @pc-view) {
+    .container-center {
+        padding: 0px 50px;
+    }
+    .block-hide {
+        height: 69px;
+    }
+    .block-hide-small {
+        height: 59px;
+    }
+    .section {
+        padding: 50px 0px;
+    }
+    .top {
+        .section {
+            padding-top: 100px;
+        }
+    }
+    .bottom {
+        .section {
+            padding-bottom: 100px;
+        }
+    }
+    .both {
+        .section {
+            padding: 100px 0px;
+        }
+    }
+    .form-search {
+        bottom: 30px;
+        right: 30px;
+    }
+}
+
+@media screen and (max-width: @tablet-view) {
+    .container-center {
+        padding: 0px 20px;
+    }
+    .form-search {
+        bottom: 20px;
+        right: 20px;
+    }
+    .section {
+        padding: 35px 0px;
+    }
+    .block-hide {
+        height: 60px;
+    }
+    .top {
+        clip-path: polygon(0 35px, 100% 0, 100% 100%, 0% 100%);
+        margin-top: -35px;
+        .section {
+            padding-top: 70px;
+        }
+    }
+    .bottom {
+        clip-path: polygon(0 0, 100% 0, 100% ~'calc(100% - 35px)', 0% 100%);
+        .section {
+            padding-bottom: 70px;
+        }
+    }
+    .both {
+        .section {
+            padding: 70px 0px;
+        }
+        margin-top: -35px;
+        clip-path: polygon(0 35px, 100% 0, 100% ~'calc(100% - 35px)', 0% 100%);
+    }
+}
+
+@media screen and (max-width: @mobile-view) {
+    .container-center {
+        padding: 0px 10px;
+    }
+    .block-hide {
+        height: 45px;
+    }
+    .section {
+        padding: 20px 0px;
+    }
+    .top {
+        clip-path: polygon(0 20px, 100% 0, 100% 100%, 0% 100%);
+        margin-top: -20px;
+        .section {
+            padding-top: 40px;
+        }
+    }
+    .bottom {
+        clip-path: polygon(0 0, 100% 0, 100% ~'calc(100% - 20px)', 0% 100%);
+        .section {
+            padding-bottom: 40px;
+        }
+    }
+    .both {
+        .section {
+            padding: 40px 0px;
+        }
+        margin-top: -20px;
+        clip-path: polygon(0 20px, 100% 0, 100% ~'calc(100% - 20px)', 0% 100%);
+    }
+    .form-search {
+        bottom: 10px;
+        right: 10px;
+        .form-control {
+            padding-left: 20px;
+            padding-right: 14px;
+            border-radius: 34px;
+        }
+        .icon-search {
+            left: 8px;
+        }
+        .input-search {
+            font-size: 12px;
+            height: 34px;
+        }
+    }
+}

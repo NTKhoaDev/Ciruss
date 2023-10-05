@@ -1,0 +1,48 @@
+.come-enjoy {
+    background: @color-primary;
+    .row {
+        margin: 0px -25px;
+        align-items: center;
+    }
+    .col-5, .col-7 {
+        padding: 0px 25px;
+    }
+    .title-block {
+        color: @color-white;
+        padding-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: @pc-view) {
+    .come-enjoy {
+        .row {
+            margin: 0px -15px;
+        }
+        .col-5, .col-7 {
+            padding: 0px 15px;
+        }
+    }
+}
+
+@media screen and (max-width: @tablet-view) {
+    .come-enjoy {
+        .title-block {
+            padding-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-view) {
+    .come-enjoy {
+        .title-block {
+            padding-bottom: 20px;
+        }
+        .row {
+            margin: 0px;
+        }
+        .col-5, .col-7 {
+            padding: 0px;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,102 @@
+.experience {
+    position: relative;
+    .container-fluid {
+        background: @color-primary;
+        position: relative;
+    }
+    .row {
+        margin: 0px -25px;
+        align-items: center;
+    }
+    .col-6 {
+        padding: 0px 25px;
+    }
+    .col-content {
+        color: @color-white;
+    }
+    .title-block {
+        padding-bottom: 30px;
+    }
+    .description {
+        padding-bottom: 50px;
+    }
+    .col-inner {
+        padding-bottom: 200px;
+    }
+    .image-absolute {
+        width: 50%;
+        padding-right: 150px;
+        padding-left: 25px;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+    }
+}
+
+@media screen and (max-width: @hd-view) {
+    .experience {
+        .image-absolute {
+            padding-right: 100px;
+        }
+    }
+}
+
+@media screen and (max-width: @pc-view) {
+    .experience {
+        .row {
+            margin: 0px -15px;
+        }
+        .col-6 {
+            padding: 0px 15px;
+        }
+        .col-inner {
+            padding-bottom: 0px;
+        }
+        .image-absolute {
+            padding-right: 50px;
+            padding-left: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: @tablet-view) {
+    .experience {
+        .image-absolute {
+            padding-right: 20px;
+        }
+        .description {
+            padding-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-view) {
+    .experience {
+        .image-absolute {
+            padding-right: 10px;
+            padding-left: 0px;
+        }
+        .description {
+            padding-bottom: 20px;
+        }
+        .row {
+            margin: 0px;
+        }
+        .col-6 {
+            padding: 0px;
+            width: 100%;
+        }
+        .title-block {
+            padding-bottom: 20px;
+        }
+        .col-content {
+            margin-bottom: 20px;
+        }
+        .col-image {
+            .col-inner {
+                max-width: 65%;
+                margin-left: auto;
+            }
+        }
+    }
+}

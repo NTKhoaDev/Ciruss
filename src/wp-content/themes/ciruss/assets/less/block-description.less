@@ -1,0 +1,108 @@
+.block-description {
+    background: @color-grey;
+    .description {
+        h1, h2, h3 {
+            font-size: 39px;
+            font-family: @extrabold;
+            padding-bottom: 20px;
+            margin-bottom: 0px;
+        }
+        h4, h5, h6 {
+            font-size: 26px;
+            font-family: @bold;
+            padding-bottom: 10px;
+            margin-bottom: 0px;
+        }
+        ol, ul, p {
+            padding-bottom: 20px;
+        }
+        p > img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .wp-caption {
+            padding: 20px 0px;
+            text-align: center;
+            margin: 0px auto;
+            max-width: 100%;
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+        .wp-caption-text {
+            font-size: 16px;
+            text-align: center;
+            padding-bottom: 0px;
+            font-style: italic;
+        }
+    }
+}
+
+@media screen and (max-width: @hd-view) {
+    .block-description {
+        .description {
+            h1, h2, h3 {
+                font-size: 34px;
+            }
+            h4, h5, h6 {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @pc-view) {
+    .block-description {
+        .description {
+            h1, h2, h3 {
+                font-size: 26px;
+            }
+            h4, h5, h6 {
+                font-size: 20px;
+            }
+            ol, ul, p {
+                padding-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @tablet-view) {
+    .block-description {
+        .description {
+            h1, h2, h3 {
+                font-size: 22px;
+            }
+            h4, h5, h6 {
+                font-size: 18px;
+            }
+            p > img {
+                margin: 10px auto;
+            }
+            .wp-caption {
+                padding: 10px 0px;
+            }
+            .wp-caption-text {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-view) {
+    .block-description {
+        .description {
+            h1, h2, h3 {
+                font-size: 18px;
+                padding-bottom: 10px;
+            }
+            h4, h5, h6 {
+                font-size: 14px;
+            }
+        }
+    }
+}

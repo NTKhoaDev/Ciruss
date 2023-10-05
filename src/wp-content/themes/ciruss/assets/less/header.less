@@ -1,0 +1,206 @@
+header {
+    background: @color-black;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 20;
+    .container-center {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .logo {
+        img {
+            transition: all linear .2s;
+            height: 100%;
+            max-height: 80px;
+        }
+    }
+    .menu-list {
+        list-style-type: none;
+        font-family: @bold;
+        text-transform: uppercase;
+        display: flex;
+        a {
+            color: @color-white;
+            transition: color linear .2s;
+            white-space: nowrap;
+            &:hover {
+                color: @color-primary;
+            }
+        }
+    }
+    .menu-item {
+        margin-left: 50px;
+        transition: all linear .2s;
+    }
+    .current-menu-item {
+        a {
+            color: @color-primary;
+        }
+    }
+    .toggle-menu, .nav-top, .overflow {
+        display: none;
+    }
+}
+.scroll {
+    .logo {
+        img {
+            max-height: 60px;
+        }
+    }
+    .menu-item {
+        font-size: 16px;
+        margin-left: 35px;
+    }
+}
+
+@media screen and (max-width: @hd-view) {
+    header {
+        .logo {
+            img {
+                max-height: 70px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @pc-view) {
+    header {
+        .logo {
+            img {
+                max-height: 50px;
+            }
+        }
+        .menu-item {
+            margin-left: 30px;
+        }
+    }
+    .scroll {
+        .logo {
+            img {
+                max-height: 40px;
+            }
+            .menu-item {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @tablet-view) {
+    header {
+        .logo {
+            img {
+                max-height: 40px;
+            }
+        }
+        .toggle-menu {
+            display: block;
+            width: 30px;
+            cursor: pointer;
+            img {
+                width: 100%;
+            }
+        }
+        .menu {
+            position: fixed;
+            top: 0px;
+            left: -150%;
+            width: 360px;
+            background: @color-primary;
+            height: 100vh;
+            overflow-y: auto;
+            transition: all linear .3s;
+            opacity: 0;
+            padding: 10px 20px;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+        }
+        .nav-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo-menu {
+            max-width: 40px;
+            img {
+                width: 100%;
+            }
+        }
+        .close {
+            width: 25px;
+            cursor: pointer;
+            img {
+                width: 100%;
+            }
+        }
+        .menu-menu-primary-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+        .menu-list {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            flex-direction: column;
+            font-family: @light;
+            & .menu-item:not(:last-child) {
+                margin-bottom: 20px;
+            }
+            & a:hover {
+                color: @color-white;
+            }
+        }
+        .menu-item {
+            margin-left: 0px;
+            font-size: 28px;
+        }
+        .current-menu-item {
+            font-family: @bold;
+            a {
+                color: @color-white;
+            }
+        }
+        .overflow {
+            display: block;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: visible;
+            background: #000000;
+            transition: all linear .3s;
+            width: 100%;
+            min-height: 100vh;
+            z-index: 5;
+        }
+        .menu-show {
+            opacity: 1;
+            left: 0px;
+        }
+        .overflow-show {
+            opacity: 0.7;
+            visibility: visible;
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-view)  {
+    header {
+        .logo, .logo-menu {
+            img {
+                max-height: 30px;
+            }
+        }
+        .menu-list {
+            padding-top: 35px;
+            padding-bottom: 35px;
+        }
+    }
+}

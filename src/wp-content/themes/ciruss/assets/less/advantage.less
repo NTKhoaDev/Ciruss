@@ -1,0 +1,128 @@
+.advantage {
+    background: @color-primary;
+    color: @color-white;
+    .content-top {
+        max-width: 900px;
+        margin: 0px auto;
+        text-align: center;
+        padding-bottom: 100px;
+    }
+    .title-block {
+        padding-bottom: 50px;
+        margin: 0px auto;
+        text-align: center;
+    }
+    .row {
+        margin: 0px -25px;
+    }
+    .col-6 {
+        padding: 0px 25px;
+    }
+    .video-wrap {
+        padding-top: 100%;
+        position: sticky;
+        top: 100px;
+        left: 0px;
+    }
+    .list {
+        list-style-type: none;
+        & .list-item:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+    .list-item {
+        display: flex;
+        align-items: flex-start;
+    }
+    .image-left {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        border-radius: 50%;
+        overflow: hidden;
+        flex-shrink: 0;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    h3 {
+        font-size: 24px;
+        font-family: @medium;
+        padding-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: @pc-view) {
+    .advantage {
+        .title-block {
+            padding-bottom: 30px;
+        }
+        .content-top {
+            padding-bottom: 30px;
+        }
+        .row {
+            margin: 0px -15px;
+        }
+        .col-6 {
+            padding: 0px 15px;
+        }
+        .image-left {
+            width: 40px;
+            height: 40px;
+        }
+        h3 {
+            font-size: 20px;
+        }
+        .list .list-item:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: @tablet-view) {
+    .advantage {
+        .row {
+            margin: 0px;
+        }
+        .col-6 {
+            padding: 0px;
+            width: 100%;
+        }
+        .video-wrap {
+            padding-top: 65%;
+        }
+        .col-video {
+            margin-bottom: 30px;
+        }
+        h3 {
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-view) {
+    .advantage {
+        .content-top {
+            padding-bottom: 20px;
+        }
+        .title-block {
+            padding-bottom: 20px;
+        }
+        .col-video {
+            margin-bottom: 20px;
+        }
+        .image-left {
+            width: 30px;
+            height: 30px;
+        }
+        h3 {
+            padding-bottom: 5px;
+            font-size: 14px;
+        }
+        .list .list-item:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+}

@@ -1,0 +1,92 @@
+.list-taxonomy {
+    list-style-type: none;
+    max-width: 1600px;
+    overflow-x: scroll;
+    white-space: nowrap;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        height: 0px;
+    }
+    .taxonomy-item {
+        margin-right: 20px;
+        display: inline-block;
+    }
+    .taxonomy-name {
+        transition: all linear .2s;
+    }
+    .taxonomy-link {
+        display: flex;
+        align-items: center;
+        padding: 0px 30px;
+        border: 1px solid @color-black;
+        height: 50px;
+        border-radius: 50px;
+        overflow: hidden;
+        color: @color-black;
+        &:hover {
+            .taxonomy-name {
+                transform: translateX(3px);
+            }
+        }
+    }
+    .taxonomy-count {
+        font-family: @bold;
+        color: @color-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 30px;
+        min-height: 30px;
+        border-radius: 50%;
+        margin-left: 20px;
+        line-height: 30px;
+        transition: all linear .2s;
+    }
+}
+
+@media screen and (max-width: @pc-view) {
+    .list-taxonomy {
+        .taxonomy-item {
+            margin-right: 15px;
+        }
+        .taxonomy-count {
+            min-width: 25px;
+            min-height: 25px;
+            line-height: 25px;
+        }
+        .taxonomy-link {
+            height: 44px;
+            border-radius: 44px;
+        }
+    }
+}
+
+@media screen and (max-width: @tablet-view) {
+    .list-taxonomy {
+        .taxonomy-item {
+            margin-right: 10px;
+        }
+        .taxonomy-count {
+            font-size: 12px;
+        }
+        .taxonomy-link {
+            height: 40px;
+            border-radius: 40px;
+            padding: 0px 20px;
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-view) {
+    .list-taxonomy {
+        .taxonomy-link {
+            height: 36px;
+            border-radius: 36px;
+        }
+        .taxonomy-count {
+            min-width: 20px;
+            min-height: 20px;
+            line-height: 20px;
+        }
+    }
+}

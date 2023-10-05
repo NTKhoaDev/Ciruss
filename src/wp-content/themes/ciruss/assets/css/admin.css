@@ -1,0 +1,43 @@
+.hidden-admin{
+    display: none;
+}
+.show-admin{
+    display: block;
+    text-align: center;
+}
+html :where(.wp-block) {
+    max-width: 100% !important;
+}
+.block-editor__container .absolute {
+    height: 100%;
+}
+.wp-block-acf-discovery .slide, .wp-block-acf-post-news .slide, .wp-block-acf-post-cate .slide, .wp-block-acf-discovery-video .slide {
+    white-space: nowrap;
+    display: block;
+    overflow: hidden;
+    margin: 0px -15px;
+}
+.wp-block-acf-discovery-video .slide {
+    padding-bottom: 10px;
+}
+.wp-block-acf-discovery .slide .slide-item, .wp-block-acf-post-news .slide .slide-item, .wp-block-acf-post-cate .slide .slide-item, .wp-block-acf-discovery-video .slide .slide-item {
+    width: calc(100%/3);
+    display: inline-block;
+    margin: 0px;
+    padding: 0px 15px;
+}
+.wp-block-acf-discovery .slide .slide-item .slide-inner, .wp-block-acf-post-news .slide .slide-item .slide-inner, .wp-block-acf-post-cate .slide .slide-item .slide-inner, .wp-block-acf-discovery-video .slide .slide-item .slide-inner {
+    display: block;
+}
+.wp-block-acf-members .members .member {
+    float: left;
+}
+.wp-block-acf-post-all .post-all .col-3:nth-child(-n+12) {
+    display: block;
+}
+.wp-block-acf-feelings .feelings .slide .slide-item {
+    display: none;
+}
+.wp-block-acf-feelings .feelings .slide .slide-item:first-child {
+    display: block;
+}

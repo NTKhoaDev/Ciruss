@@ -1,0 +1,55 @@
+.play {
+    .content-wrap {
+        padding-top: 65%;
+        position: relative;
+    }
+    .content {
+        max-width: 750px;
+        position: absolute;
+        left: 0px;
+        bottom: 100px;
+    }
+    .title-block {
+        padding-bottom: 10px;
+    }
+    .time {
+        font-size: 16px;
+    }
+    .btn-submit {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: @pc-view) {
+    .play {
+        .btn-submit {
+            margin-top: 50px;
+        }
+        .time {
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: @tablet-view) {
+    .play {
+        .title-block {
+            padding-bottom: 5px;
+        }
+        .btn-submit {
+            margin-top: 20px;
+        }
+        .content-wrap {
+            padding-top: 80%;
+        }
+        .content {
+            max-width: 100%;
+            bottom: unset;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .time {
+            font-size: 12px;
+        }
+    }
+}
